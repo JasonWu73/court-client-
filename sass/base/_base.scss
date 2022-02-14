@@ -1,0 +1,32 @@
+@use '../abstracts/mixins' as *;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  // 定义 1rem = 10px
+  font-size: 10px / 16px * 100%;
+}
+
+body {
+  font: caption; // 系统字体
+  font-size: 1.6rem;
+
+  box-sizing: border-box;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+img {
+  @include no-drag;
+}

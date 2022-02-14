@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy"
+        content="script-src 'self' 'unsafe-inline'">
+    <link rel="stylesheet" href="style.css">
+    <title>当庭签到</title>
+  </head>
+  <body>
+    <div class="sign">
+      <header class="sign__head">
+        <div class="active">全部</div>
+        <div>原告</div>
+        <div>被告</div>
+      </header>
+
+      <div class="sign__content">
+        <table class="table">
+          <tr>
+            <th>姓名</th>
+            <th>身份</th>
+            <th>是否签到</th>
+            <th>签到方式</th>
+            <th>操作</th>
+          </tr>
+          <tr>
+            <td>张三</td>
+            <td>原告</td>
+            <td class="text-green">已签到</td>
+            <td>自助</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>李四</td>
+            <td>原告</td>
+            <td>未签到</td>
+            <td>-</td>
+            <td>
+              <button class="button button--primary">人工签到</button>
+            </td>
+          </tr>
+          <tr>
+            <td>王五</td>
+            <td>被告</td>
+            <td class="text-green">已签到</td>
+            <td>人工</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>赵六</td>
+            <td>被告</td>
+            <td class="text-green">已签到</td>
+            <td>自助</td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

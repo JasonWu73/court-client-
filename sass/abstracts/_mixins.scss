@@ -1,0 +1,31 @@
+@mixin clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin no-select {
+  user-select: none;
+}
+
+@mixin no-drag {
+  -webkit-user-drag: none;
+}
+
+@mixin filter-white {
+  filter: invert(100%);
+}
+
+@mixin filter-hover-brown {
+  filter: invert(80%) sepia(18%) saturate(2452%) hue-rotate(334deg) brightness(99%) contrast(81%);
+}
+
+@mixin absoluteCenter {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 1;
+}

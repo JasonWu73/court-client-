@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy"
+        content="script-src 'self' 'unsafe-inline'">
+    <link rel="stylesheet" href="style.css">
+    <title>菜单窗口</title>
+  </head>
+  <body>
+    <div id="index-1" class="menu hidden">
+      <div class="menu__item" data-ipc="draw">
+        <img src="img/comment.svg"><br>屏幕批注
+      </div>
+
+      <div class="menu__item tooltip">
+        <img src="img/showEvi.svg"><br>法官示证
+        <span class="tooltip__tip">法官示证演示</span>
+      </div>
+
+      <div class="menu__item tooltip">
+        <img src="img/showEvi.svg"><br>原告示证
+        <span class="tooltip__tip">原告示证演示</span>
+      </div>
+
+      <div class="menu__item" data-ipc="preview">
+        <img src="img/eye.svg"><br>快捷预览
+      </div>
+
+      <div class="menu__item" data-ipc="matrix">
+        <img src="img/matrix.svg"><br>矩阵切换
+      </div>
+    </div>
+
+    <div id="index-2" class="menu hidden">
+      <div class="menu__item">
+        <img src="img/chuizi.svg"><br>内网庭审
+      </div>
+
+      <div class="menu__item">
+        <img src="img/multiJudge.svg"><br>多方庭审
+      </div>
+
+      <div class="menu__item">
+        <img src="img/internet.svg"><br>互联网庭审
+      </div>
+    </div>
+
+    <script src="menu-window.js"></script>
+  </body>
+</html>

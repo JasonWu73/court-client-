@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy"
+        content="script-src 'self' 'unsafe-inline'">
+    <link rel="stylesheet" href="style.css">
+    <title>屏幕批注</title>
+  </head>
+  <body>
+    <div class="draw">
+      <div id="js-unfold" class="draw__unfold hidden">
+        <img src="img/down.svg">
+      </div>
+
+      <div id="js-toolbar" class="draw__toolbar">
+        <div class="draw__toolbar__tools">
+          <div id="js-quit" class="draw__toolbar__tools__item">
+            <div><img src="img/exit.svg"></div>
+            <div>退出</div>
+          </div>
+          <div class="draw__toolbar__tools__item draw__toolbar__tools__item--active js-mode"
+              data-mode="draw">
+            <div><img src="img/comment.svg"></div>
+            <div>画笔</div>
+          </div>
+          <div class="draw__toolbar__tools__item js-mode"
+              data-mode="text">
+            <div><img src="img/text.svg"></div>
+            <div>文本</div>
+          </div>
+          <div class="draw__toolbar__tools__item js-mode"
+              data-mode="line">
+            <div><img src="img/line.svg"></div>
+            <div>直线</div>
+          </div>
+          <div class="draw__toolbar__tools__item js-mode"
+              data-mode="ellipse">
+            <div><img src="img/circle.svg"></div>
+            <div>椭圆</div>
+          </div>
+          <div class="draw__toolbar__tools__item js-mode"
+              data-mode="rect">
+            <div><img src="img/rect.svg"></div>
+            <div>矩形</div>
+          </div>
+          <div class="draw__toolbar__tools__item draw__toolbar__tools__item--reset">
+            <div class="vertical_bar"></div>
+          </div>
+          <div class="draw__toolbar__tools__item js-mode"
+              data-mode="eraser">
+            <div><img src="img/eraser.svg"></div>
+            <div>橡皮擦</div>
+          </div>
+          <div id="js-undo"
+              class="draw__toolbar__tools__item">
+            <div><img src="img/prevStep.svg"></div>
+            <div>上一步</div>
+          </div>
+          <div id="js-save" class="draw__toolbar__tools__item">
+            <div><img src="img/save.svg"></div>
+            <div>保存</div>
+          </div>
+          <div id="js-complete"
+              class="draw__toolbar__tools__item">
+            <div><img src="img/gou.svg"></div>
+            <div>完成</div>
+          </div>
+        </div>
+
+        <div class="draw__toolbar__features">
+          <div class="draw__toolbar__features__item"
+              style="padding-top: .8rem">
+            <label class="check_dot check_dot--small">
+              <input type="radio" name="circle" checked data-value="6">
+              <span class="check_dot__span"></span>
+            </label>
+          </div>
+          <div class="draw__toolbar__features__item"
+              style="padding-top: .4rem">
+            <label class="check_dot">
+              <input type="radio" name="circle" data-value="10">
+              <span class="check_dot__span"></span>
+            </label>
+          </div>
+          <div class="draw__toolbar__features__item">
+            <label class="check_dot check_dot--large">
+              <input type="radio" name="circle" data-value="14">
+              <span class="check_dot__span"></span>
+            </label>
+          </div>
+          <div class="draw__toolbar__features__item draw__toolbar__features__item--size">
+            <div class="vertical_bar"></div>
+          </div>
+          <div class="draw__toolbar__features__item">
+            <label class="checkmark">
+              <input type="radio" name="color" checked
+                  data-value="#6d1e1a">
+              <span class="checkmark__span"></span>
+            </label>
+          </div>
+          <div class="draw__toolbar__features__item">
+            <label class="checkmark">
+              <input type="radio" name="color" data-value="#e6a23c">
+              <span class="checkmark__span"></span>
+            </label>
+          </div>
+          <div class="draw__toolbar__features__item">
+            <label class="checkmark">
+              <input type="radio" name="color" data-value="#1a9bff">
+              <span class="checkmark__span"></span>
+            </label>
+          </div>
+          <div class="draw__toolbar__features__item">
+            <label class="checkmark">
+              <input type="radio" name="color" data-value="#1aad19">
+              <span class="checkmark__span"></span>
+            </label>
+          </div>
+          <div class="draw__toolbar__features__item">
+            <label class="checkmark">
+              <input type="radio" name="color" data-value="black">
+              <span class="checkmark__span"></span>
+            </label>
+          </div>
+          <div class="draw__toolbar__features__item">
+            <label class="checkmark">
+              <input type="radio" name="color" data-value="white">
+              <span class="checkmark__span"></span>
+            </label>
+          </div>
+          <div id="js-fold"
+              class="draw__toolbar__features__fold">
+            <div><img src="img/top.svg"></div>
+          </div>
+        </div>
+      </div>
+
+      <canvas id="js-canvas"></canvas>
+    </div>
+
+    <script src="draw-window.js"></script>
+  </body>
+</html>

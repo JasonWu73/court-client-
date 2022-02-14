@@ -1,0 +1,49 @@
+{
+  "name": "court-client",
+  "version": "0.2.0",
+  "description": "庭审物联网平台",
+  "homepage": "http://www.qgs-china.com/qgs/",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "watch": "nodemon --exec electron .",
+    "compile:sass": "sass --no-source-map --watch sass/main.scss:renderer/style.css",
+    "build": "electron-builder -w",
+    "build:mac": "electron-builder -m",
+    "build:linux": "electron-builder -l"
+  },
+  "keywords": [],
+  "author": "杭州乾冠 <wuxianjiezh@163.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^12.0.5",
+    "electron-builder": "^22.11.2",
+    "nodemon": "^2.0.7",
+    "sass": "^1.33.0"
+  },
+  "build": {
+    "appId": "com.qgs-china.court-client",
+    "productName": "庭审物联网平台",
+    "copyright": "Copyright © 2021 杭州乾冠",
+    "files": [
+      "**/*",
+      "build/icon.ico",
+      "build/tray@2x.png"
+    ],
+    "mac": {
+      "category": "public.app-category.productivity",
+      "target": "dmg"
+    },
+    "win": {
+      "target": "nsis:x64"
+    },
+    "linux": {
+      "category": "Utility",
+      "target": "deb"
+    }
+  },
+  "dependencies": {
+    "auto-launch": "^5.0.5",
+    "electron-log": "^4.3.5"
+  }
+}

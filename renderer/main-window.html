@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy"
+        content="script-src 'self' 'unsafe-inline'">
+    <link rel="stylesheet" href="style.css">
+    <title>主窗口</title>
+  </head>
+  <body>
+    <div class="fold">
+      <img class="fold__logo" src="img/logo.png">
+    </div>
+
+    <div class="main hidden">
+      <div class="main__item main__item--logo">
+        <img src="img/logo.png">
+      </div>
+
+      <div class="main__item" data-menu-index="1">
+        <img src="img/eviSwitch.svg">质证切换
+      </div>
+
+      <div class="main__item" data-menu-index="2">
+        <img src="img/sceneSwitch.svg">场景切换
+      </div>
+
+      <div id="env" class="main__item" data-ipc="env">
+        <img src="img/envControl.svg">环境控制
+      </div>
+
+      <div id="equipment" class="main__item" data-ipc="equipment">
+        <img src="img/deviceStatus.svg">设备状态
+      </div>
+
+      <div id="privacy" class="main__item" data-ipc="privacy">
+        <img src="img/privacy.svg">隐私保护
+      </div>
+
+      <div id="sign" class="main__item" data-ipc="sign">
+        <img src="img/sign.svg">当庭签到
+      </div>
+
+      <div id="evidence" class="main__item" data-ipc="evidence">
+        <img src="img/eviAdd.svg">证人接入
+      </div>
+
+      <div id="support" class="main__item" data-ipc="support">
+        <img src="img/techSupport.svg">技术支持
+      </div>
+
+      <div class="main__item js-put-away">
+        <img src="img/top.svg">收起
+      </div>
+    </div>
+
+    <script src="main-window.js"></script>
+  </body>
+</html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy"
+        content="script-src 'self' 'unsafe-inline'">
+    <link rel="stylesheet" href="style.css">
+    <title>设置</title>
+  </head>
+  <body>
+    <div class="setting">
+      <aside class="setting__nav">
+        <div class="setting__nav__item setting__nav__item--active"
+            data-panel="1">功能启用
+        </div>
+        <div class="setting__nav__item"
+            data-panel="2">
+          矩阵切换
+        </div>
+
+        <div class="vertical_bar setting__nav__vb"></div>
+      </aside>
+
+      <main class="setting__content">
+        <section id="js-panel-1" class="setting__content__func">
+          <div class="setting__content__func__msg">
+            请开启您要使用的功能
+          </div>
+          <div class="setting__content__func__item">
+            质证切换&nbsp;
+            <label class="switch">
+              <input id="cross_exam" type="checkbox" checked>
+              <span class="switch__span"></span>
+            </label>
+          </div>
+          <div class="setting__content__func__item">
+            场景切换&nbsp;
+            <label class="switch">
+              <input id="scene" type="checkbox" checked>
+              <span class="switch__span"></span>
+            </label>
+          </div>
+          <div class="setting__content__func__item">
+            环境控制&nbsp;
+            <label class="switch">
+              <input id="env" type="checkbox" checked>
+              <span class="switch__span"></span>
+            </label>
+          </div>
+          <div class="setting__content__func__item">
+            设备状态&nbsp;
+            <label class="switch">
+              <input id="equipment" type="checkbox" checked>
+              <span class="switch__span"></span>
+            </label>
+          </div>
+          <div class="setting__content__func__item">
+            隐私保护&nbsp;
+            <label class="switch">
+              <input id="privacy" type="checkbox" checked>
+              <span class="switch__span"></span>
+            </label>
+          </div>
+          <div class="setting__content__func__item">
+            当庭签到&nbsp;
+            <label class="switch">
+              <input id="sign" type="checkbox" checked>
+              <span class="switch__span"></span>
+            </label>
+          </div>
+          <div class="setting__content__func__item">
+            证人接入&nbsp;
+            <label class="switch">
+              <input id="evidence" type="checkbox" checked>
+              <span class="switch__span"></span>
+            </label>
+          </div>
+          <div class="setting__content__func__item">
+            技术支持&nbsp;
+            <label class="switch">
+              <input id="support" type="checkbox" checked>
+              <span class="switch__span"></span>
+            </label>
+          </div>
+        </section>
+
+        <section id="js-panel-2"
+            class="hidden setting__content__matrix">
+          <div id="js-matrix-tab"
+              class="setting__content__matrix__tabs"
+              style="user-select: none;">
+            <div class="setting__content__matrix__tabs__tab setting__content__matrix__tabs__tab--active"
+                data-index="1">
+              新建
+            </div>
+            <div class="setting__content__matrix__tabs__tab">
+              <div id="js-nav-matrix-2"
+                  data-index="2" draggable="true">
+                法官示证演示
+              </div>
+            </div>
+            <div class="setting__content__matrix__tabs__tab">
+              <div id="js-nav-matrix-3"
+                  data-index="3" draggable="true">
+                原告示证演示
+              </div>
+            </div>
+
+            <div class="horizontal_bar"></div>
+          </div>
+
+          <div id="js-matrix-1" class="setting__content__matrix__container">
+            <div class="setting__content__matrix__container__input">
+              <input type="text" placeholder="请输入场景名称">
+            </div>
+
+            <div class="setting__content__matrix__container__label">预览
+            </div>
+            <div class="setting__content__matrix__container__see">
+              <img src="img/eye-fill.png"></div>
+            <div class="setting__content__matrix__container__see">
+              <img src="img/eye-fill.png"></div>
+            <div class="setting__content__matrix__container__see">
+              <img src="img/eye-fill.png"></div>
+            <div class="setting__content__matrix__container__see">
+              <img src="img/eye-fill.png"></div>
+
+            <div class="setting__content__matrix__container__label">输入
+            </div>
+            <div class="setting__content__matrix__container__btn">书记员</div>
+            <div class="setting__content__matrix__container__btn setting__content__matrix__container__btn--un">
+              法官
+            </div>
+            <div class="setting__content__matrix__container__btn setting__content__matrix__container__btn--un">
+              公诉人
+            </div>
+            <div class="setting__content__matrix__container__btn setting__content__matrix__container__btn--un">
+              示证
+            </div>
+
+            <div class="setting__content__matrix__container__line">
+              <div class="setting__content__matrix__container__line--left"></div>
+              <div class="setting__content__matrix__container__line--center"></div>
+              <div class="setting__content__matrix__container__line--right"></div>
+              <div class="setting__content__matrix__container__line--right"></div>
+              <div class="setting__content__matrix__container__line--right"></div>
+              <div class="setting__content__matrix__container__line--right"></div>
+              <div class="setting__content__matrix__container__line--right"></div>
+              <div class="setting__content__matrix__container__line--right"></div>
+              <div class="setting__content__matrix__container__line--right"></div>
+            </div>
+
+            <div class="setting__content__matrix__container__label">输出
+            </div>
+            <div class="setting__content__matrix__container__btn">原告</div>
+            <div class="setting__content__matrix__container__btn">被告</div>
+            <div class="setting__content__matrix__container__btn setting__content__matrix__container__btn--error">
+              法庭大屏
+            </div>
+            <div class="setting__content__matrix__container__btn">原告代理
+            </div>
+            <div class="setting__content__matrix__container__btn">被告代理
+            </div>
+            <div class="setting__content__matrix__container__btn">陪审员1
+            </div>
+            <div class="setting__content__matrix__container__btn">陪审员2
+            </div>
+            <div class="setting__content__matrix__container__btn">输出8</div>
+          </div>
+
+          <div id="js-matrix-2" class="hidden setting__content__matrix__container">
+            <div class="setting__content__matrix__container__input">
+              <input type="text" placeholder="请输入场景名称" value="法官示证演示">
+            </div>
+
+            <div class="setting__content__matrix__container__label">预览
+            </div>
+            <div class="setting__content__matrix__container__see">
+              <img src="img/eye-fill.png"></div>
+            <div class="setting__content__matrix__container__see">
+              <img src="img/eye-fill.png"></div>
+            <div class="setting__content__matrix__container__see">
+              <img src="img/eye-fill.png"></div>
+            <div class="setting__content__matrix__container__see">
+              <img src="img/eye-fill.png"></div>
+
+            <div class="setting__content__matrix__container__label">输入
+            </div>
+            <div class="setting__content__matrix__container__btn">书记员</div>
+            <div class="setting__content__matrix__container__btn setting__content__matrix__container__btn--un">
+              法官
+            </div>
+            <div class="setting__content__matrix__container__btn setting__content__matrix__container__btn--un">
+              公诉人
+            </div>
+            <div class="setting__content__matrix__container__btn setting__content__matrix__container__btn--un">
+              示证
+            </div>
+
+            <div class="setting__content__matrix__container__line">
+              <div class="setting__content__matrix__container__line--left"></div>
+              <div class="setting__content__matrix__container__line--center"></div>
+              <div class="setting__content__matrix__container__line--right"></div>
+              <div class="setting__content__matrix__container__line--right"></div>
+              <div class="setting__content__matrix__container__line--right"></div>
+              <div class="setting__content__matrix__container__line--right"></div>
+              <div class="setting__content__matrix__container__line--right"></div>
+              <div class="setting__content__matrix__container__line--right"></div>
+              <div class="setting__content__matrix__container__line--right"></div>
+            </div>
+
+            <div class="setting__content__matrix__container__label">输出
+            </div>
+            <div class="setting__content__matrix__container__btn">原告</div>
+            <div class="setting__content__matrix__container__btn">被告</div>
+            <div class="setting__content__matrix__container__btn setting__content__matrix__container__btn--error">
+              法庭大屏
+            </div>
+            <div class="setting__content__matrix__container__btn">原告代理
+            </div>
+            <div class="setting__content__matrix__container__btn">被告代理
+            </div>
+            <div class="setting__content__matrix__container__btn">陪审员1
+            </div>
+            <div class="setting__content__matrix__container__btn">陪审员2
+            </div>
+            <div class="setting__content__matrix__container__btn">输出8</div>
+          </div>
+
+          <div id="js-matrix-3" class="hidden setting__content__matrix__container">
+            <div class="setting__content__matrix__container__input">
+              <input type="text" placeholder="请输入场景名称" value="原告示演示">
+            </div>
+
+            <div class="setting__content__matrix__container__label">预览
+            </div>
+            <div class="setting__content__matrix__container__see">
+              <img src="img/eye-fill.png"></div>
+            <div class="setting__content__matrix__container__see">
+              <img src="img/eye-fill.png"></div>
+            <div class="setting__content__matrix__container__see">
+              <img src="img/eye-fill.png"></div>
+            <div class="setting__content__matrix__container__see">
+              <img src="img/eye-fill.png"></div>
+
+            <div class="setting__content__matrix__container__label">输入
+            </div>
+            <div class="setting__content__matrix__container__btn">书记员</div>
+            <div class="setting__content__matrix__container__btn setting__content__matrix__container__btn--un">
+              法官
+            </div>
+            <div class="setting__content__matrix__container__btn setting__content__matrix__container__btn--un">
+              公诉人
+            </div>
+            <div class="setting__content__matrix__container__btn setting__content__matrix__container__btn--un">
+              示证
+            </div>
+
+            <div class="setting__content__matrix__container__line">
+              <div class="setting__content__matrix__container__line--left"></div>
+              <div class="setting__content__matrix__container__line--center"></div>
+              <div class="setting__content__matrix__container__line--right"></div>
+              <div class="setting__content__matrix__container__line--right"></div>
+              <div class="setting__content__matrix__container__line--right"></div>
+              <div class="setting__content__matrix__container__line--right"></div>
+              <div class="setting__content__matrix__container__line--right"></div>
+              <div class="setting__content__matrix__container__line--right"></div>
+              <div class="setting__content__matrix__container__line--right"></div>
+            </div>
+
+            <div class="setting__content__matrix__container__label">输出
+            </div>
+            <div class="setting__content__matrix__container__btn">原告</div>
+            <div class="setting__content__matrix__container__btn">被告</div>
+            <div class="setting__content__matrix__container__btn setting__content__matrix__container__btn--error">
+              法庭大屏
+            </div>
+            <div class="setting__content__matrix__container__btn">原告代理
+            </div>
+            <div class="setting__content__matrix__container__btn">被告代理
+            </div>
+            <div class="setting__content__matrix__container__btn">陪审员1
+            </div>
+            <div class="setting__content__matrix__container__btn">陪审员2
+            </div>
+            <div class="setting__content__matrix__container__btn">输出8</div>
+          </div>
+
+          <div class="setting__content__matrix__right">
+            <div style="margin-bottom: .6rem">全选</div>
+            <div>
+              <label class="checkmark">
+                <input type="checkbox" name="preview" checked>
+                <span class="checkmark__span"></span>
+              </label>
+            </div>
+          </div>
+
+          <div class="setting__content__matrix__outer">
+            <div>
+              <label class="checkmark">
+                <input type="checkbox" name="preview" checked>
+                <span class="checkmark__span"></span>
+              </label>显示切换确认对话框
+            </div>
+            <div>
+              <button id="js-matrix-del" class="hidden button button--danger">
+                删除
+              </button>
+              <button id="js-matrix-save-as" class="hidden button button--unimportant">
+                另存为
+              </button>
+              <button class="button button--primary">
+                保存
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="setting-window.js"></script>
+  </body>
+</html>

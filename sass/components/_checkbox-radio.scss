@@ -1,0 +1,126 @@
+@use '../abstracts/variables' as *;
+
+@mixin step1($wd, $hg) {
+  position: relative;
+  display: inline-block;
+  width: $wd;
+  height: $hg;
+}
+
+@mixin step2 {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+@mixin step3 {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.switch {
+  @include step1(3rem, 1.2rem);
+
+  input {
+    @include step2;
+
+    &:checked + span {
+      background-color: $color-primary-blue;
+    }
+
+    &:checked + span:before {
+      transform: translateX(1.8rem);
+    }
+  }
+
+  &__span {
+    @include step3;
+
+    background-color: $color-grey;
+    transition: .4s;
+    border-radius: .6rem;
+
+    &:before {
+      position: absolute;
+      content: "";
+      height: .8rem;
+      width: .8rem;
+      left: .2rem;
+      bottom: .2rem;
+      background-color: white;
+      transition: .4s;
+      border-radius: 50%;
+    }
+  }
+}
+
+.checkmark {
+  @include step1(2.4rem, 2.4rem);
+
+  input {
+    @include step2;
+
+    &:checked + span {
+      background-color: $color-primary-blue;
+    }
+
+    &:checked + span:before {
+      display: inline-block;
+    }
+  }
+
+  &__span {
+    @include step3;
+
+    background-color: $color-grey;
+    border-radius: .4rem;
+
+    &:before {
+      position: absolute;
+      content: "";
+      width: .5rem;
+      height: 1rem;
+      top: .1rem;
+      left: .5rem;
+      border: solid white;
+      border-width: 0 .3rem .3rem 0;
+      transform: rotate(45deg);
+      display: none;
+    }
+  }
+}
+
+.check_dot {
+  @include step1(1rem, 1rem);
+
+  &--small {
+    @include step1(.6rem, .6rem);
+  }
+
+  &--large {
+    @include step1(1.4rem, 1.4rem);
+  }
+
+  input {
+    @include step2;
+
+    &:checked + span {
+      background-color: $color-primary-blue;
+    }
+
+    &:checked + span:before {
+      display: inline-block;
+    }
+  }
+
+  &__span {
+    @include step3;
+
+    background-color: $color-grey;
+    border-radius: 50%;
+  }
+}

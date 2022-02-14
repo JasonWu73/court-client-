@@ -1,0 +1,90 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.equipment {
+  height: 100vh;
+  font-size: $font-size-content;
+  padding: 3rem;
+
+  display: flex;
+  flex-direction: column;
+
+  &__head {
+    height: 8rem;
+    text-align: center;
+
+    display: grid;
+    grid-template-columns: repeat(10, auto);
+
+    &__item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $color-grey-light;
+      }
+
+      &--active {
+        background-color: $color-grey-light;
+      }
+
+      img {
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+  }
+
+  &__content {
+    background-color: $color-grey-light;
+    padding: 3rem;
+
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+
+    &__row {
+      padding-bottom: 3rem;
+
+      display: flex;
+      flex-wrap: wrap;
+
+      &__col {
+        margin-right: 3rem;
+      }
+    }
+
+    &__card {
+      flex-grow: 1;
+      display: grid;
+      grid-template-rows: 7rem;
+      grid-auto-rows: 7rem;
+      grid-template-columns: repeat(3, auto);
+      grid-gap: 3rem;
+
+      &__item {
+        border: .1rem solid $color-grey;
+        background-color: white;
+        width: 22rem;
+        height: 7rem;
+        text-align: center;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+
+        img {
+          width: 2rem;
+          height: 2rem;
+        }
+
+        &__label {
+          justify-self: self-start;
+        }
+      }
+    }
+  }
+}

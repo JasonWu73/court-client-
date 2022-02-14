@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy"
+        content="script-src 'self' 'unsafe-inline'">
+    <link rel="stylesheet" href="style.css">
+    <title>环境控制</title>
+  </head>
+  <body>
+    <div class="env">
+      <header class="env__head">
+        <div class="env__head__item env__head__item--active">
+          <img src="img/bulb.svg"><br>灯光
+        </div>
+        <div class="env__head__item">
+          <img src="img/curt.svg"><br>窗帘
+        </div>
+        <div class="env__head__item">
+          <img src="img/power.svg"><br>电源
+        </div>
+        <div class="env__head__item">
+          <img src="img/laba.svg"><br>噪音
+        </div>
+        <div class="env__head__item">
+          <img src="img/PM25.svg"><br>空气质量
+        </div>
+        <div class="env__head__item">
+          <img src="img/light.svg"><br>光照
+        </div>
+      </header>
+
+      <main class="env__content">
+        <div class="env__content__row">
+          <div class="env__content__row__col">
+            总开关&nbsp;
+            <label class="switch">
+              <input type="checkbox">
+              <span class="switch__span"></span>
+            </label>
+          </div>
+        </div>
+
+        <div class="env__content__card">
+          <div class="env__content__card__item">
+            <div class="env__content__card__item__icon">
+              <img src="img/bulbIcon.png">
+            </div>
+            <div class="env__content__card__item__label">
+              灯光一<br>
+              <span class="dot dot--on"></span>&nbsp;在线
+            </div>
+            <div class="env__content__card__item__switch">
+              <label class="switch">
+                <input type="checkbox">
+                <span class="switch__span"></span>
+              </label>
+            </div>
+          </div>
+
+          <div class="env__content__card__item">
+            <div class="env__content__card__item__icon">
+              <img src="img/bulbIcon.png">
+            </div>
+            <div class="env__content__card__item__label">
+              灯光二<br>
+              <span class="dot dot--off"></span>&nbsp;离线
+            </div>
+            <div class="env__content__card__item__switch">
+              <label class="switch">
+                <input type="checkbox">
+                <span class="switch__span"></span>
+              </label>
+            </div>
+          </div>
+
+          <div class="env__content__card__item">
+            <div class="env__content__card__item__icon">
+              <img src="img/bulbIcon.png">
+            </div>
+            <div class="env__content__card__item__label">
+              灯光三<br>
+              <span class="dot dot--on"></span>&nbsp;在线
+            </div>
+            <div class="env__content__card__item__switch">
+              <label class="switch">
+                <input type="checkbox">
+                <span class="switch__span"></span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy"
+        content="script-src 'self' 'unsafe-inline'">
+    <link rel="stylesheet" href="style.css">
+    <title>技术支持</title>
+  </head>
+  <body>
+    <div class="support">
+      <header class="support__head">
+        <span>张三&nbsp;
+          <span class="dot dot--on"></span>&nbsp;在线
+        </span>
+      </header>
+
+      <main class="support__chat">
+        <section class="support__chat__day">
+          <header class="support__chat__day__date">
+            2021-05-20
+          </header>
+
+          <section class="support__chat__day__other">
+            <article class="support__chat__day__other__content">
+              张工，我这边看不到几个同屏按钮，是什么原因啊？
+            </article>
+            <footer class="support__chat__day__other__time">
+              17:30
+            </footer>
+          </section>
+
+          <section class="support__chat__day__other">
+            <article class="support__chat__day__other__content">
+              <img src="test-cut.jpg">
+            </article>
+            <footer class="support__chat__day__other__time">
+              17:30
+            </footer>
+          </section>
+        </section>
+
+        <section class="support__chat__day">
+          <header class="support__chat__day__date">今天</header>
+
+          <section class="support__chat__day__me">
+            <article class="support__chat__day__me__content">
+              收到，我这边马上排查一下
+            </article>
+            <footer class="support__chat__day__me__time">
+              17:30
+            </footer>
+          </section>
+        </section>
+      </main>
+
+      <footer class="support__input">
+        <div class="support__input__tools">
+          <img class="capture" src="img/cut.png">
+        </div>
+
+        <div class="support__input__content"
+            contenteditable="true" autofocus>
+        </div>
+
+        <div class="support__input__bottom">
+          <button class="button button--primary submit">发送</button>
+        </div>
+      </footer>
+    </div>
+
+    <script src="support-window.js"></script>
+  </body>
+</html>

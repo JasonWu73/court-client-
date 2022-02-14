@@ -1,0 +1,33 @@
+@use '../abstracts/variables' as *;
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+
+  th, td {
+    padding: .8rem;
+  }
+
+  th {
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    text-align: left;
+    background-color: white;
+    color: $color-grey-dark;
+  }
+
+  td {
+    color: $color-grey-darker;
+  }
+
+  tr {
+
+    &:nth-child(even) {
+      background-color: $color-grey-light;
+    }
+
+    &:hover {
+      background-color: $color-blue-pale;
+    }
+  }
+}

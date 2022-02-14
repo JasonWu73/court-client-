@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy"
+        content="script-src 'self' 'unsafe-inline'">
+    <link rel="stylesheet" href="style.css">
+    <title>证人接入</title>
+  </head>
+  <body>
+    <div class="evidence">
+      <header class="evidence__head">
+        <div class="active">全部</div>
+        <div>未使用</div>
+        <div>使用中</div>
+      </header>
+
+      <div class="evidence__content">
+        <table class="table">
+          <tr>
+            <th>证人室</th>
+            <th>使用状态</th>
+            <th>使用法庭</th>
+            <th>操作</th>
+          </tr>
+          <tr>
+            <td>证人室1</td>
+            <td>使用中</td>
+            <td>第一法庭</td>
+            <td>
+              <button class="button button--primary">预览</button>
+            </td>
+          </tr>
+          <tr>
+            <td>证人室2</td>
+            <td class="text-green">未使用</td>
+            <td>-</td>
+            <td>
+              <button class="button button--primary">预览</button>
+              <button class="button button--primary">接入</button>
+            </td>
+          </tr>
+          <tr>
+            <td>证人室3</td>
+            <td class="text-green">未使用</td>
+            <td>-</td>
+            <td>
+              <button class="button button--primary">预览</button>
+              <button class="button button--primary">接入</button>
+            </td>
+          </tr>
+          <tr>
+            <td>证人室4</td>
+            <td>使用中</td>
+            <td>第三法庭</td>
+            <td>
+              <button class="button button--primary">预览</button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

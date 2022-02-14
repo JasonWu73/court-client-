@@ -1,0 +1,42 @@
+@use '../abstracts/variables' as *;
+
+.button {
+  font-size: $font-size-content;
+  padding: .6rem;
+  background-color: white;
+  display: inline-block;
+  cursor: pointer;
+  border: .1rem solid $color-grey;
+  outline: none;
+
+  &:hover {
+    background-color: $color-grey-light;
+  }
+
+  &--primary {
+    background-color: $color-primary-blue;
+    color: white;
+
+    &:hover {
+      background-color: rgba($color-primary-blue, .8);
+    }
+  }
+
+  &--danger {
+    background-color: $color-text-red;
+    color: white;
+
+    &:hover {
+      background-color: rgba($color-text-red, .8);
+    }
+  }
+
+  &--unimportant {
+    background-color: $color-grey;
+    color: $color-grey-dark;
+
+    &:hover {
+      background-color: rgba($color-grey, .8);
+    }
+  }
+}
